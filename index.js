@@ -1,4 +1,7 @@
-# <readme-generator>
+const inquirer = require('inquirer');
+const fs = require('fs');
+const genMarkdown = ({name}) =>
+`# <${name}>
 
 ## Description
 
@@ -64,4 +67,36 @@ If you created an application or package and would like other developers to cont
 
 ## Tests
 
-Go the extra mile and write tests for your application. Then provide examples on how to run them here.
+Go the extra mile and write tests for your application. Then provide examples on how to run them here.`
+
+inquirer
+    .prompt([
+        {
+            type: 'input',
+            name: 'name',
+            message: 'What is the title of your project?',
+        },
+        // {
+        //     type: 'checkbox',
+        //     message: 'What languages do you know?',
+        //     name: 'stack',
+        //     choices: ['HTML', 'CSS', 'JavaScript', 'MySQL'],
+        // },
+        // {
+        //     type: 'list',
+        //     message: 'What is your preferred method of communication?',
+        //     name: 'contact',
+        //     choices: ['email', 'phone', 'telekinesis'],
+        // },
+    ])
+    .then((data) => {
+        const markdownContent = genMarkdown(data);
+
+        fs.writeFile('README.md', markdownContent, (err) => 
+            err ? console.log(err) : console.log('Success!')
+        // const filename = `${data.name.toUpperCase().split(' ').join('')}.md`;
+
+        // fs.writeFile(filename, JSON.stringify(data, null, '\t'), (err) =>
+        //     err ? console.log(err) : console.log('Success!')
+        );
+    });
