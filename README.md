@@ -22,9 +22,7 @@ Type in "node index", then the user will be prompted to answer a series of quest
 
 To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
 
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
+![image of readme](/images/readmeGenerator.jpg)
 
 ## Credits
 

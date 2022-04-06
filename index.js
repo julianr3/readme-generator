@@ -9,7 +9,6 @@ ${description}
 
 ## Table of Contents (Optional)
 
-If your README is long, add a table of contents to make it easy for users to find what they need.
 
 - [Installation](#installation)
 - [Usage](#usage)
@@ -90,21 +89,11 @@ inquirer
             name: 'test',
             message: 'please provide examples of how to run project test...',
         },
-        // {
-        //     type: 'list',
-        //     message: 'What is your preferred method of communication?',
-        //     name: 'contact',
-        //     choices: ['email', 'phone', 'telekinesis'],
-        // },
     ])
     .then((data) => {
         const markdownContent = genMarkdown(data);
 
         fs.writeFile('README.md', markdownContent, (err) => 
             err ? console.log(err) : console.log('Success!')
-        // const filename = `${data.name.toUpperCase().split(' ').join('')}.md`;
-
-        // fs.writeFile(filename, JSON.stringify(data, null, '\t'), (err) =>
-        //     err ? console.log(err) : console.log('Success!')
         );
     });
