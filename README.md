@@ -1,12 +1,11 @@
-# <runnign>
+# <readme-generator>
 
 ## Description
 
-idk 
+Excellent resource for creating a README.md file quick and easy! The readme-generator was created
+to help the user save precious time while creating a project.
 
 ## Table of Contents (Optional)
-
-If your README is long, add a table of contents to make it easy for users to find what they need.
 
 - [Installation](#installation)
 - [Usage](#usage)
@@ -15,31 +14,28 @@ If your README is long, add a table of contents to make it easy for users to fin
 
 ## Installation
 
-step 1 thru 10
-
+Open index.js in VSCode. Open the terminal associated with index.js and type in "npm install 'inquirer'" then press enter. The user will now be able to execute the task. 
 ## Usage
 
-just do it
-   
+Type in "node index", then the user will be prompted to answer a series of questions. If questions are answered correctly without an error, there will be a "success!" message displayed and a README.md file will be generated.
+
+
+To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
+
+    ```md
     ![alt text](assets/images/screenshot.png)
-    
+    ```
 
 ## Credits
 
-nope just me 
-
-## License
-
-MIT,Babel,Rails,Bash
-
+Not applicable.
 
 ## Badges
+
+![badmath](https://img.shields.io/github/languages/top/lernantino/badmath)
 
 
 ## Features
 
-dont have any
-
-## Tests
-
-na
+Easy and quick use to generated detailed Readme files on the 
+fly!
