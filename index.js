@@ -1,6 +1,10 @@
+// requiring inquirer for use on js
 const inquirer = require('inquirer');
+// requiring file systems for use on js
 const fs = require('fs');
+// used for taking user input and insert into the readme template
 const genMarkdown = ({name, description, install, instructions, contributors,licenses, features, test}) =>
+// the readme template
 `# <${name}>
 
 ## Description
@@ -45,7 +49,7 @@ ${features}
 ## Tests
 
 ${test}`
-
+// using the terminal to ask the user questions for the readme 
 inquirer
     .prompt([
         {
@@ -92,7 +96,7 @@ inquirer
     ])
     .then((data) => {
         const markdownContent = genMarkdown(data);
-
+// used to create the readme file and attach template + user inputs
         fs.writeFile('README.md', markdownContent, (err) => 
             err ? console.log(err) : console.log('Success!')
         );
